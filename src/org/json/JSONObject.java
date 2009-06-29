@@ -95,6 +95,7 @@ public class JSONObject implements Map<String, Object> {
          * so the clone method returns itself.
          * @return     NULL.
          */
+        @Override
         protected final Object clone() {
             return this;
         }
@@ -106,6 +107,7 @@ public class JSONObject implements Map<String, Object> {
          * @return true if the object parameter is the JSONObject.NULL object
          *  or null.
          */
+        @Override
         public boolean equals(Object object) {
             return object == null || object == this;
         }
@@ -115,6 +117,7 @@ public class JSONObject implements Map<String, Object> {
          * Get the "null" string value.
          * @return The string "null".
          */
+        @Override
         public String toString() {
             return "null";
         }
@@ -126,11 +129,13 @@ public class JSONObject implements Map<String, Object> {
      */
     private Map map;
 
+    @Override
     public boolean equals(Object obj){
         //return this.hashCode() == obj.hashCode();
         return map.equals(obj);
     }
 
+    @Override
     public int hashCode() {
         return map.hashCode();      
     }
@@ -1311,6 +1316,7 @@ public class JSONObject implements Map<String, Object> {
      *  with <code>{</code>&nbsp;<small>(left brace)</small> and ending
      *  with <code>}</code>&nbsp;<small>(right brace)</small>.
      */
+    @Override
     public String toString() {
         try {
             Iterator     keys = keys();

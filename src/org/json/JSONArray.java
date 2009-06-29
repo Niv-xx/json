@@ -824,6 +824,7 @@ public class JSONArray implements List<Object>{
      * @return a printable, displayable, transmittable
      *  representation of the array.
      */
+    @Override
     public String toString() {
         try {
             return '[' + join(",") + ']';
