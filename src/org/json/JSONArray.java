@@ -1022,12 +1022,13 @@ public class JSONArray implements List<Object>{
       return myArrayList.toArray(a);
    }
 
-   /*
+   @Override
    public boolean equals(Object obj) {
        return myArrayList.equals(obj);
    }
 
+   @Override
    public int hashCode() {
        return myArrayList.hashCode();
-   } */
+   } 
 }
